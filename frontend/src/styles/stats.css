@@ -1,0 +1,49 @@
+.word-card-grid {
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.word-card {
+	width: 400px;
+	margin: 20px auto;
+	padding: 10px;
+	border: 2px solid #ddd;
+	border-radius: 10px;
+	background: #f9f9f9;
+	font-family: "Kufam", sans-serif; 
+}
+
+.bar-row {
+	display: grid;
+	grid-template-columns: 100px 1fr 40px;
+	align-items: center;
+	gap: 10px;
+	margin: 5px 0;
+}
+
+.bar-container {
+	height: 15px;
+	background: #eee;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.bar {
+	height: 100%;
+	border-radius: 10px;
+}
+
+.correct1 {
+  	background: #007bff;
+}
+
+.correct2 {
+ 	background: #28a745;
+}
+
+.incorrect {
+  	background: #dc3545;
+}

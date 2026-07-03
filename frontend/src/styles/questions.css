@@ -1,0 +1,139 @@
+.question-panel {
+	width: 85vw;
+	height: 83vh;
+	margin: 6.5vh auto;
+
+	border-radius: 1vw;
+	box-shadow: 0 0.75vh 2.5vh rgba(0,0,0,0.20);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	font-family: "Kufam", sans-serif;   
+}
+
+.question-title {
+	margin-top: 3vh;
+	color: #1f3ca0;
+	font-size: 3rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+.question-subtitle {
+    margin-top: 1vh;
+	color: #1f3ca0;
+	font-size: 2rem;
+	font-weight: 400;
+	text-align: center;
+}
+
+.audio-container {
+    margin-top: 12vh;
+    margin-bottom: 17vh;
+	display: flex;
+	justify-content: center;
+}
+
+.audio-container button {
+    width: 16vw;
+    height: 4vw;
+
+    font-size: 3vw;
+    color: white;
+
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.audio-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    top: 60%;
+    left: 50%;
+    gap: 3vw;
+}
+
+.button-row button {
+    width: 10vw;
+    height: 10vw;
+    padding: 1rem 2rem;
+    background-color: #8e9eb0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.button-row button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.modal-background {
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+
+.modal-box {
+	background: white;
+
+	padding: 4vh;
+	border-radius: 12px;
+	width: 30vw;
+	height: 60vh;
+
+	text-align: center;
+	font-family: "Kufam", sans-serif;
+	font-size: 3.5vw;
+	color:#152d85;
+
+	z-index: 3;
+  	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.modal-box button {
+	background: white;
+
+	border-radius: 12px;
+	width: 20vw;
+	height: 8vh;
+	margin-top: 8vh;
+
+	text-align: center;
+	font-family: "Kufam", sans-serif;
+	font-size: 2vw;
+
+	color:#152d85;
+
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.modal-box button:hover {
+    background-color: #0056b3;
+    color:rgb(255, 255, 255);
+    transform: scale(1.05);
+}

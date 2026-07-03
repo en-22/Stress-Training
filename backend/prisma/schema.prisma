@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int        @id @default(autoincrement())
+  questions Question[]
+}
+
+model Word {
+  id                Int                 @id @default(autoincrement())
+  letters           String
+  stress_silable    stress_silable_type
+  audio_no_stress   String              @unique
+  audio_with_stress String              @unique
+  speaker           Boolean
+  questions         Question[]
+}
+
+model Question {
+  id      Int          @id @default(autoincrement())
+  answer  answer_type?
+  user_id Int
+  word_id Int
+  user    User         @relation(fields: [user_id], references: [id])
+  word    Word         @relation(fields: [word_id], references: [id])
+
+  @@index([user_id], map: "Question_user_id_fkey")
+  @@index([word_id], map: "Question_word_id_fkey")
+}
+
+enum stress_silable_type {
+  OXYTONE
+  PAROXYTONE
+  PROPAROXYTONE
+  PREPROPAROXYTONE
+}
+
+enum answer_type {
+  CORRECT_1
+  CORRECT_2
+  INCORRECT
+}
